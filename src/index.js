@@ -1,11 +1,9 @@
-import app from './app.js'
+import app from './app.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
-//import {getConnection} from "./database/connection.js "
+const PORT = process.env.PORT || 3000;
 
-//getConnection()
-
-app.listen(3000)
-
-console.log("servidor on")
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
